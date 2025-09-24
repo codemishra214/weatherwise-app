@@ -1,0 +1,55 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: transparent; /* Make it transparent */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff; /* White text for better contrast on dynamic backgrounds */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navigation {
+  display: flex;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px 15px;
+  border-radius: 50px;
+}
+
+.nav-link {
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 18px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-link.active {
+  background-color: #fff;
+  color: #2c3e50;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}

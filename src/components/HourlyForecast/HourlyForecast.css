@@ -1,0 +1,72 @@
+.hourly-forecast-container {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  padding: 20px;
+  margin-bottom: 2rem;
+}
+
+.forecast-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.hourly-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 15px;
+}
+
+.hourly-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.hourly-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.hourly-card {
+  flex: 0 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+  color: #333;
+}
+
+.hourly-time, .hourly-temp {
+  margin: 0;
+  font-weight: 500;
+}
+.hourly-icon {
+  width: 50px;
+  height: 50px;
+  /* Adds shadow for visibility on light backgrounds */
+  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.4));
+}
+
+/* NIGHT MODE STYLES */
+.App.bg-night .hourly-forecast-container {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.App.bg-night .forecast-title {
+  color: #f5f5f5;
+}
+.App.bg-night .hourly-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f5f5f5;
+}
+.App.bg-night .hourly-icon {
+  filter: none;
+}

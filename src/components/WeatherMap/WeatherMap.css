@@ -1,0 +1,46 @@
+.map-page-container {
+  display: flex;
+  justify-content: center;
+}
+
+.map-card {
+  width: 100%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  padding: 30px;
+}
+
+.App.bg-night .map-card {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.map-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.map-subtitle {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.App.bg-night .map-title, .App.bg-night .map-subtitle {
+    color: #fff;
+}
+
+.map-wrapper {
+  height: 500px;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
