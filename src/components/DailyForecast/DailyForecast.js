@@ -2,7 +2,6 @@ import React from 'react';
 import './DailyForecast.css';
 
 const DailyForecast = ({ forecastData }) => {
-  // This function processes the 3-hour forecast data into daily highs and lows
   const processForecastData = (list) => {
     const dailyData = {};
 
@@ -20,7 +19,7 @@ const DailyForecast = ({ forecastData }) => {
 
     return Object.keys(dailyData).slice(0, 5).map(date => {
       const dayInfo = dailyData[date];
-      // Use the icon from midday (around 12:00-15:00) for a representative icon
+      
       const representativeIcon = dayInfo.icons[Math.floor(dayInfo.icons.length / 2)];
       return {
         name: new Date(date).toLocaleDateString('en-US', { weekday: 'short' }),

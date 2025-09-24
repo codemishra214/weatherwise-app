@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background-color: transparent; /* Make it transparent */
+  background-color: transparent; 
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -17,7 +17,7 @@
 .logo h1 {
   margin: 0;
   font-size: 1.5rem;
-  color: #fff; /* White text for better contrast on dynamic backgrounds */
+  color: #fff; 
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 

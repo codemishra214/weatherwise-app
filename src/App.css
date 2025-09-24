@@ -1,82 +1,90 @@
-/* src/App.css */
+
+:root {
+  --primary-color: #3498db;
+  --success-color: #2ecc71;
+  --text-dark: #2c3e50;
+  --text-light: #555;
+  --background-light: #fff;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --radius-pill: 50px;
+  --radius-card: 15px;
+}
+
+
 .App {
   min-height: 100vh;
-  transition: background 0.5s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-/* Background Classes */
-.bg-default { background: linear-gradient(135deg, #74ebd5, #ACB6E5); }
-.bg-sunny { background: linear-gradient(135deg, #56CCF2, #2F80ED); }
-.bg-cloudy { background: linear-gradient(135deg, #bdc3c7, #2c3e50); }
-.bg-rainy { background: linear-gradient(135deg, #2c3e50, #4A5568); }
-.bg-night { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
-.bg-misty { background: linear-gradient(135deg, #D7D2CC, #304352); }
-.bg-snowy { background: linear-gradient(135deg, #e6dada, #274046); }
+.bg-default { background-image: linear-gradient(135deg, #74ebd5, #ACB6E5); }
+.bg-sunny { background-image: linear-gradient(135deg, #56CCF2, #2F80ED); }
+.bg-cloudy { background-image: linear-gradient(135deg, #bdc3c7, #2c3e50); }
+.bg-rainy { background-image: linear-gradient(135deg, #2c3e50, #4A5568); }
+.bg-night { background-image: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
+.bg-misty { background-image: linear-gradient(135deg, #D7D2CC, #304352); }
+.bg-snowy { background-image: linear-gradient(135deg, #e6dada, #274046); }
 
-/* Map Cursor Fix */
+
 .leaflet-container {
-  cursor: pointer !important;
+  cursor: pointer !important; 
 }
 
-/* === MAP SEARCH BAR STYLES === */
 
-/* Reposition the entire search control container */
-.leaflet-control-geosearch {
-  position: absolute !important;
-  /* CHANGE: Use a smaller top value to place it just below the text */
-  top: 15px !important;
-  /* CHANGE: Make it span the width with some padding */
-  left: 40px !important;
-  right: 40px !important;
-  width: auto !important; 
+.map-card .leaflet-control-geosearch {
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  right: 40px;
+  width: auto; 
   max-width: 600px;
-  margin: 0 auto !important; /* Center it */
-  transform: none !important; /* Reset the transform */
+  margin: 0 auto;
+  transform: none; 
 }
 
-/* Style the search bar itself */
-.leaflet-control-geosearch form {
-  border-radius: 50px !important;
-  border: 1px solid rgba(0, 0, 0, 0.1) !important;
-  background-color: #fff !important;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+
+.map-card .leaflet-control-geosearch form {
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-color);
+  background-color: var(--background-light);
+  box-shadow: var(--shadow-light);
   height: 45px;
 }
 
-.leaflet-control-geosearch form input {
-  padding-left: 20px !important;
-  border-radius: 50px !important;
+.map-card .leaflet-control-geosearch form input {
+  padding-left: 20px;
+  border-radius: var(--radius-pill);
   height: 100%;
-  border: none !important;
+  border: none;
 }
 
-.leaflet-control-geosearch form .glass {
-  border: none !important;
-  border-left: 1px solid #ddd !important;
-  border-top-right-radius: 50px !important;
-  border-bottom-right-radius: 50px !important;
+.map-card .leaflet-control-geosearch form .glass {
+  border: none;
+  border-left: 1px solid #ddd;
+  border-top-right-radius: var(--radius-pill);
+  border-bottom-right-radius: var(--radius-pill);
   height: 100%;
   width: 50px;
 }
 
-/* Style the dropdown results */
-.leaflet-control-geosearch .results {
+
+.map-card .leaflet-control-geosearch .results {
   margin-top: 10px;
-  border-radius: 15px !important;
-  border: 1px solid rgba(0, 0, 0, 0.1) !important;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-light);
 }
 
-.leaflet-control-geosearch .results > * {
-  padding: 10px 20px !important;
+.map-card .leaflet-control-geosearch .results > * {
+  padding: 10px 20px;
 }
 
-.leaflet-control-geosearch .results > .active,
-.leaflet-control-geosearch .results > :hover {
-  background-color: #3498db !important;
-  color: #fff !important;
-  border-radius: 10px !important;
+.map-card .leaflet-control-geosearch .results > .active,
+.map-card .leaflet-control-geosearch .results > :hover {
+  background-color: var(--primary-color);
+  color: var(--background-light);
+  border-radius: 10px;
 }

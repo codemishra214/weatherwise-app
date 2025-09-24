@@ -1,4 +1,4 @@
-const API_KEY = '27d9e875732a8ea9ad20d3028cdacb97'; // Your API key now lives here
+const API_KEY = '27d9e875732a8ea9ad20d3028cdacb97'; // this is my api
 
 const removeDiacritics = (str) => {
   if (!str) return '';
@@ -9,7 +9,7 @@ export const fetchWeatherData = async (lat, lon, searchedCityName) => {
   const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
   const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
 
-  // Promise.all is more efficient as it runs both fetches at the same time
+  
   const [currentWeatherResponse, forecastResponse] = await Promise.all([
     fetch(currentWeatherUrl),
     fetch(forecastUrl),
@@ -25,7 +25,7 @@ export const fetchWeatherData = async (lat, lon, searchedCityName) => {
   const displayName = searchedCityName || currentWeatherData.name;
   const normalizedDisplayName = removeDiacritics(displayName);
 
-  // Return a clean, combined data object
+  
   return {
     current: currentWeatherData,
     forecast: forecastData,
@@ -33,7 +33,7 @@ export const fetchWeatherData = async (lat, lon, searchedCityName) => {
   };
 };
 
-// Add this to src/utils/api.js
+
 export const fetchGeocodingData = async (city) => {
   const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`);
   return response.json();

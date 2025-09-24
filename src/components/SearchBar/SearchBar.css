@@ -3,7 +3,7 @@
   justify-content: center;
   gap: 10px;
   width: 100%;
-  max-width: 500px; /* Control max width */
+  max-width: 500px; 
   margin: 0 auto;
 }
 
@@ -12,7 +12,7 @@
   padding: 12px 20px;
   font-size: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50px; /* Pill shape */
+  border-radius: 50px;
   background-color: #fff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.3s ease;
@@ -30,7 +30,7 @@
   background: linear-gradient(45deg, #2ecc71, #27ae60);
   color: white;
   border: none;
-  border-radius: 50px; /* Pill shape */
+  border-radius: 50px;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
   transition: transform 0.2s ease, box-shadow 0.2s ease;

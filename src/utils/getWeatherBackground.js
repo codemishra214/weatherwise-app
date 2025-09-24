@@ -1,4 +1,3 @@
-// src/utils/getWeatherBackground.js
 export const getWeatherBackground = (weatherData) => {
   if (!weatherData) return 'bg-default';
 

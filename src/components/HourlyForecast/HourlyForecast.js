@@ -2,7 +2,6 @@ import React from 'react';
 import './HourlyForecast.css';
 
 const HourlyForecast = ({ forecastData }) => {
-  // Get the next 8 entries (24 hours) from the forecast list
   const next24Hours = forecastData.list.slice(0, 8);
 
   const formatTime = (timestamp) => {

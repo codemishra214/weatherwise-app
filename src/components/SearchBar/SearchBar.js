@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { fetchGeocodingData } from '../../utils/api'; // We'll add this to api.js
+import { fetchGeocodingData } from '../../utils/api'; // 
 import './SearchBar.css';
 
 const SearchBar = ({ onSearch }) => {

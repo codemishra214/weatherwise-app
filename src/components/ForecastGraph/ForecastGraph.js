@@ -3,7 +3,6 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 import './ForecastGraph.css';
 
 const ForecastGraph = ({ forecastData }) => {
-  // This function processes the 3-hour forecast data into daily highs and lows
   const processForecastData = (list) => {
     const dailyData = {};
 

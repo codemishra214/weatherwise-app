@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import DashboardPage from './pages/DashboardPage';
 import './App.css';
-import 'leaflet-geosearch/dist/geosearch.css'; // This is the required line
+import 'leaflet-geosearch/dist/geosearch.css'; 
 
 function App() {
   return (
