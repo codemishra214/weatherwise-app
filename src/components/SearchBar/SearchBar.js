@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { fetchGeocodingData } from '../../utils/api'; // We'll add this to api.js
 import './SearchBar.css';
 
-const SearchBar = ({ onSearch, apiKey }) => {
+const SearchBar = ({ onSearch }) => {
   const [city, setCity] = useState('');
 
   const handleSearch = async (e) => {
@@ -9,11 +10,10 @@ const SearchBar = ({ onSearch, apiKey }) => {
     if (city.trim() === '') return;
 
     try {
-      const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`);
-      const data = await response.json();
-      if (data.length > 0) {
-        const { lat, lon } = data[0];
-        onSearch(lat, lon, city);
+      const response = await fetchGeocodingData(city);
+      if (response.length > 0) {
+        const { lat, lon, name } = response[0];
+        onSearch(lat, lon, name);
       } else {
         alert('City not found. Please try again.');
       }
